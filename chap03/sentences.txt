@@ -1,0 +1,19 @@
+It can be useful for a writer to make sure they are using variety of
+sentence lengths, or to ensure none of their sentences are too long.
+Let's build a tool that evaluates a text file for sentence length.
+
+Choosing the appropriate container key when using the STL. If you need
+something ordered, it's often best to use an associative container, such
+as map or multimap. In this case, however, since we need a descending
+sort, it's easier to sort a vector. 
+
+The vector is generally the most flexible of the STL containers.
+Whenever another container type seems appropriate, but is missing one
+important capability, the vector is often an effective solution. In this
+case, where we need our output sorted in descending order, the vector
+works great.
+
+This recipe uses a vector of vectors. The inner vector stores the words
+of a sentence, and the outer vector stores the inner vectors. As you'll
+see, this affords a lot of flexibility while retaining all the relevant
+data. 
