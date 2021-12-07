@@ -20,8 +20,7 @@ void rprint(todomap& todo) {
     cout << '\n';
 }
 
-int main()
-{
+int main() {
     todomap todo {
         {1, "wash dishes"},
         {0, "watch teevee"},
