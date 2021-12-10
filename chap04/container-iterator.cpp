@@ -152,10 +152,9 @@ public:
 void unit_tests(Container<string>& x) {
     puts("\nunit tests =============================");
 
-    using it_t = std::iter_difference_t<Container<string>::iterator>;
     auto a = x.begin();
     auto b = x.begin() + 5;
-    it_t n = b - a;
+    auto n = b - a;
     bool r{};
 
     cout << format("*a: {}\n", *a);
