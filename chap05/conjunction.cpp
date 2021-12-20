@@ -1,5 +1,5 @@
 //  conjunction.cpp
-//  as of 2021-12-15 bw [bw.org]
+//  as of 2021-12-20 bw [bw.org]
 
 #include <format>
 #include <iostream>
@@ -15,8 +15,7 @@ using std::istream_iterator;
 using std::ostream_iterator;
 
 template <typename F, typename A, typename B>
-auto combine(F binary_func, A a, B b)
-{
+auto combine(F binary_func, A a, B b) {
     return [=](auto param) {
         return binary_func(a(param), b(param));
     };
