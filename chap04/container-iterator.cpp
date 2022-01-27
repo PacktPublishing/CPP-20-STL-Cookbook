@@ -216,8 +216,7 @@ void unit_tests(Container<string>& x) {
     cout << format("{}: (a <= b)\n", r);
 }
 
-int main()
-{
+int main() {
     Container<string> x{"one", "two", "three", "four", "five", 
         "six", "seven", "eight", "nine", "ten" };
     cout << format("Container x size: {}\n", x.size());

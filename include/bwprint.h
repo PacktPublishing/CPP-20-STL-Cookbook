@@ -2,7 +2,7 @@
 // Copyright (c) 2021 BHG LLC
 // This code is free and open source without restriction
 // Please include attribution above
-// updated 2021-10-29
+// updated 2022-01-17
 //
 // This code requires either the C++20 <format> library,
 // or the libfmt library from <https://fmt.dev/>
@@ -49,24 +49,28 @@
 namespace BWP_NAMESPACE {
 
     using BWP_FMTNS::format;
-    constexpr const char * bwp_version = "1.0.10";
+    using BWP_FMTNS::formatter;
+    using BWP_FMTNS::vformat;
+    using BWP_FMTNS::make_format_args;
+
+    constexpr const char * bwp_version = "1.0.12";
 
     // default to stdout
     // print(string_view format-string, args...)
     template<typename... Args> constexpr void print(const std::string_view str_fmt, Args&&... args) {
-        fputs(BWP_FMTNS::vformat(str_fmt, BWP_FMTNS::make_format_args(args...)).c_str(), stdout);
+        fputs(vformat(str_fmt, make_format_args(args...)).c_str(), stdout);
     }
 
     // send to FILE*
     // print(FILE*, string_view format-string, args...)
     template<typename... Args> constexpr void print(FILE* fdest, const std::string_view str_fmt, Args&&... args) {
-        fputs(BWP_FMTNS::vformat(str_fmt, BWP_FMTNS::make_format_args(args...)).c_str(), fdest);
+        fputs(vformat(str_fmt, make_format_args(args...)).c_str(), fdest);
     }
 
     // send to ostream
     // print(ostream, string_view format-string, args...)
     template<typename... Args> constexpr void print(std::ostream & ostream_dest, const std::string_view str_fmt, Args&&... args) {
-        ostream_dest << BWP_FMTNS::vformat(str_fmt, BWP_FMTNS::make_format_args(args...));
+        ostream_dest << vformat(str_fmt, make_format_args(args...));
     }
 
     // no parameter stack cstr
