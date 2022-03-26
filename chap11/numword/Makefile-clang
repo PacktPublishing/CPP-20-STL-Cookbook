@@ -1,0 +1,17 @@
+# Makefile for working stuff
+
+INCLUDE = /Users/billw/Xcode/include
+OPT=-O3
+WARNINGS=-Wpedantic
+GCC = clang++ ${WARNINGS} ${OPT} -std=c++2b -I${INCLUDE} -mmacosx-version-min=11.6
+LINKFLAGS = -L/usr/local/lib -lfmt
+
+all: numword
+
+numword: numword.cpp numword.h numword-test.cpp
+	${GCC} numword.cpp numword-test.cpp ${LINKFLAGS} -o numword
+
+clean: 
+	rm \
+            numword
+

@@ -1,0 +1,20 @@
+# Makefile for working stuff
+
+INCLUDE = /home/billw/include
+OPT=-Os
+WARNINGS=-Wpedantic
+GCC = g++-11 ${WARNINGS} ${OPT} -std=c++2b -I${INCLUDE}
+GCC17 = g++-11 ${WARNINGS} ${OPT} -std=c++17 -I${INCLUDE}
+GCC_MODULES = g++-11 ${WARNINGS} ${OPT}-std=c++2b -fmodules-ts -I${INCLUDE}
+LINKFLAGS = -lfmt
+EXTRA_FLAGS = -fconcepts-diagnostics-depth=2 
+
+all: numword
+
+numword: numword.cpp numword.h numword-test.cpp
+	${GCC} numword.cpp numword-test.cpp ${LINKFLAGS} -o numword
+
+clean: 
+	rm \
+            numword
+
