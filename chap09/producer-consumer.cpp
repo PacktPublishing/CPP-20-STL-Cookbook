@@ -1,5 +1,5 @@
 //  producer-consumer.cpp
-//  as of 2022-03-05 bw [bw.org]
+//  as of 2022-03-29 bw [bw.org]
 
 #include <format>
 #include <iostream>
@@ -46,7 +46,7 @@ void consumer() {
         cond.wait(lck, []{ return !q.empty() || finished; });
         while(!q.empty()) {
             cout << format("Got {} from the queue\n", q.front());
-            q.pop_back();
+            q.pop_front();
         }
     }
 }

@@ -1,5 +1,5 @@
 //  format.cpp
-//  as of 2022-01-27 bw [bw.org]
+//  as of 2022-04-27 bw [bw.org]
 
 #include <format>
 #include <iostream>
@@ -22,12 +22,10 @@ struct Frac {
 };
 
 // format print
-#ifdef __cpp_lib_format // we don't need this if using fmt.dev or bwprint
 template<typename... Args>
 constexpr void print(const string_view str_fmt, Args&&... args) {
     fputs(std::vformat(str_fmt, std::make_format_args(args...)).c_str(), stdout);
 }
-#endif
 
 // format specialization
 template <typename T>
