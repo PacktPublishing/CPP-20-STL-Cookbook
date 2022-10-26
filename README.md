@@ -56,3 +56,7 @@ With the following software and hardware list you can run all code files present
 Since the mid 1990s, Mr. Weinman has focused on writing and teaching. His books and courses cover HTML, SQL, CGI, Python, and, of course, C and C++. An early contributor to online learning, his clear, concise writing has made his courses a popular feature on lynda.com and LinkedIn Learning.
 
 Follow Bill on his website at bw.org.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781803248714">https://packt.link/free-ebook/9781803248714 </a> </p>
