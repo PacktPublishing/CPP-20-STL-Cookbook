@@ -63,3 +63,6 @@ Follow Bill on his website at bw.org.
 
  <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
 <p align="center"> <a href="https://packt.link/free-ebook/9781803248714">https://packt.link/free-ebook/9781803248714 </a> </p>
+
+## Errata
+* Page 6: The line that reads `auto format(const Frac& f, FormatContext& ctx) {` should read `auto format(const Frac& f, FormatContext& ctx) const {`
