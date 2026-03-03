@@ -30,7 +30,7 @@ struct formatter<Frac> {
     }
 
     template<typename FormatContext>
-    auto format(const Frac& f, FormatContext& ctx) {
+    auto format(const Frac& f, FormatContext& ctx) const {
         return format_to(ctx.out(), "{0:d}/{1:d}", f.n, f.d);
     }
 };
